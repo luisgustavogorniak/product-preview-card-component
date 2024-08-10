@@ -1,0 +1,104 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--cream);
+}
+
+.card {
+  background-color: var(--white);
+  max-width: 340px;
+  border-radius: 20px;
+  padding-bottom: 0.1rem;
+  overflow: hidden;
+}
+
+.mobile-img {
+  max-width: 100%;
+}
+
+.desktop-img {
+  display: none;
+}
+
+.content {
+  margin: 1.4rem;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 33px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.type {
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: var(--dark-grayish-blue);
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5rem;
+}
+
+.princing {
+  display: flex;
+  align-items: center;
+  color: var(--dark-cyan);
+  gap: 2rem;
+}
+
+.princing p {
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--very-dark-blue);
+}
+
+@media screen and (min-width: 1015px) {
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+    max-width: 50%;
+  }
+
+  .card {
+    display: flex;
+    max-width: 650px;
+  }
+}
